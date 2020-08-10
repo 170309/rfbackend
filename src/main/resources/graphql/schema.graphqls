@@ -1,0 +1,70 @@
+input UserForm{
+    phone:String,
+    smsCode:String,
+    password:String,
+    userType:Int,
+    userId:String,
+}
+input InfoVOInput{
+    consumerInfo:ConsumerInfo
+    merchantsInfo:MerchantsInfo
+    deliverymanInfo:DeliverymanInfo
+    user:User
+}
+type InfoVO{
+    consumerInfo:ConsumerInfo
+    merchantsInfo:MerchantsInfo
+    deliverymanInfo:DeliverymanInfo
+    user:User
+}
+
+type User{
+    id:ID
+    accessToken:String
+    loginStatus:Int
+    userId:String
+    userType:Int
+    phone:String
+}
+type ConsumerInfo{
+    id:ID
+    account:String
+    consumerId:String
+    email:String
+    name:String
+    password:String
+    phone:String
+    userNickname:String
+    userPortrait:String
+}
+type DeliverymanInfo{
+    id:ID
+    deliverymanId:String
+    headPortrait:String
+    name:String
+    nickname:String
+    password:String
+    phone:String
+    status:Int
+}
+scalar BigDecimal
+type MerchantsInfo{
+    id:ID
+    avgDeliveryTime:Int
+    bgpic:String
+    categoryId:String
+    description:String
+    detail:String
+    end:String
+    headPortrait:String
+    hotline:String
+    latitude:BigDecimal
+    longitude:BigDecimal
+    merchantsId:String
+    notice:String
+    password:String
+    phone:String
+    regionId:String
+    start:String
+    storeName:String
+}

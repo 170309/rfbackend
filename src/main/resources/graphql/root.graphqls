@@ -1,0 +1,15 @@
+schema {
+    query: Query
+    mutation: Mutaion
+}
+type Mutaion{
+    login(userInput:UserForm):InfoVO
+    updateUser(infoVO:InfoVOInput):InfoVO
+    deleteUser(infoVO:InfoVOInput):InfoVO
+}
+
+type Query{
+    smsCode(phone:String!,userType:Int!):String
+    getUserInfo(userId:String,phone:String):InfoVO
+    loginStatus(userId:String!):User
+}

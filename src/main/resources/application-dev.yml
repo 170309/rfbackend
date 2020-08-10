@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-wz9x2692i9kgi870pqo.mysql.rds.aliyuncs.com:3306/onehammer2.0?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true&useSSL=false
+    username: rfronfei
+    password: 29H@OtC^5
+    type: com.alibaba.druid.pool.DruidDataSource
+    name: onehammerDataSource
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties:
+      druid:
+        stat:
+          mergeSql: true
+          slowSqlMillis: 5000
+  redis:
+    host: r-wz9qqzmu4kegdea16upd.redis.rds.aliyuncs.com
+    port: 6379
+    password: 29H@OtC^5
+    database: 1
